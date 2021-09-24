@@ -1,14 +1,8 @@
 defmodule HelloWorld do
-  def main(args), do: args |> parse_args |> _main
+    @spec add(integer(), integer()) :: integer()
+    def add(x, y), do: x + y
 
-  defp _main([]), do: _main [name: "World"]
-  defp _main(options), do: IO.puts("Hello, #{options[:name]}!")
-
-  defp parse_args(args) do
-    {options, _, _} = OptionParser.parse(args,
-      switches: [name: :string]
-    )
-    options
-  end
+    def main do
+        IO.puts(add(5, 7))
+    end
 end
-
