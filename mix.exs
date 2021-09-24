@@ -4,7 +4,7 @@ defmodule HelloWorld.Mixfile do
   def project do
     [app: :hello_world,
      version: "0.0.1",
-     elixir: "~> 1.1",
+     elixir: "~> 1.9",
      escript: [main_module: HelloWorld],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
